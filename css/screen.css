@@ -307,6 +307,10 @@ textarea {
   background: none;
 }
 
+.head_top .has-regularmenu:hover .dropdown-menu {
+  display: block;
+}
+
 .head_top .dropdown-menu {
   background-color: #ededed;
   border-radius: 0;
