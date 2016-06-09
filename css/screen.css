@@ -357,6 +357,10 @@ textarea {
   display: block;
 }
 
+.show_mobile {
+  display: none;
+}
+
 /*----------end-header----------*/
 /*----------main----------*/
 .main {
@@ -459,3 +463,112 @@ textarea {
 }
 
 /*----------end footer----------*/
+@media only screen and (max-width: 1000px) {
+  .logo_big img {
+    width: 100%;
+  }
+  .head_top .nav a {
+    padding: 0;
+  }
+  .photos_wrap .photo_block {
+    display: inline-block;
+  }
+  .gallery img {
+    width: 100%;
+  }
+  .social img {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .head_top .navbar {
+    margin-top: -37px;
+  }
+  .navbar-toggle .icon-bar {
+    background: #fff;
+  }
+  .head_top {
+    height: auto;
+  }
+  .head_top .navbar-toggle {
+    float: right;
+  }
+  .head_top .navbar-collapse {
+    clear: both;
+    width: 100%;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+  }
+  .head_top .nav li {
+    border: none;
+    height: auto;
+  }
+  .head_top .nav li .search {
+    display: none;
+  }
+  .navbar-nav .open .dropdown-menu > li > a {
+    color: #fff;
+  }
+  .head_top .dropdown-menu {
+    margin-top: 0 !important;
+  }
+  .show_mobile {
+    display: block;
+  }
+  .search {
+    padding: 12px 25px 0 0;
+  }
+  .head_top .dropdown-menu li {
+    padding: 0;
+  }
+  .navbar-nav .open .dropdown-menu .dropdown-header, .navbar-nav .open .dropdown-menu > li > a {
+    padding: 5px 0;
+    text-align: right;
+    display: block;
+  }
+  .navbar-toggle {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .photos_wrap .photo_block {
+    width: 100%;
+  }
+  .photos_wrap .photo_block img {
+    width: 100%;
+  }
+  .gallery img {
+    margin-bottom: 10px;
+  }
+  .search input {
+    width: 22px;
+    float: right;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .search input.active {
+    width: 86px;
+  }
+  .header {
+    padding-top: 90px;
+    padding-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .logo img {
+    width: 110px;
+  }
+  .search {
+    padding-right: 9px;
+  }
+  .navbar {
+    margin-bottom: 5px;
+  }
+}

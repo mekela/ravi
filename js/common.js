@@ -8,5 +8,9 @@ $(document).ready(function() {
 		}
 	});
 	
-	
+	//input
+	$( ".search input" ).click(function() {
+	  $( this ).addClass('active');
+	});
+
 });
