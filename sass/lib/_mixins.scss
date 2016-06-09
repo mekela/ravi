@@ -27,15 +27,14 @@ overflow: hidden;
 }
 
 @mixin input($input){
-  width: 300px;
-  height: 25px;
+  width: 270px;
+  height: 64px;
   box-sizing: border-box;
-  padding: 0 5px;
-  color: #000;
-  font-size: 14px;
+  padding: 0 20px;
+  color: #0c0c0c;
+  font-size: 18px;
   font-family: $ffamily;
-  border: 1px solid #000;
-  border-radius: 3px;
+  border: 1px solid #cecece;
   resize:none;
 }
 @mixin input_focus($input_focus){

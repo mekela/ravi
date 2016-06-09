@@ -27,6 +27,20 @@
   		max-width: 100%;
   	}
   }
+  .content_txt{
+  	width: 100%;
+  	img{max-width: 100%;}
+  }
+  .form_line > div{
+  	display: block;
+  	padding: 0 0 20px 0;
+  	input{
+  		width: 100%;
+  	}
+  }
+  .form_line > div:last-child{
+  	text-align: center;
+  }
 }
 
 @include mq($max-width: 800px) {
@@ -121,5 +135,8 @@
 	}
 	.navbar{
 		margin-bottom: 5px;
+	}
+	.button{
+		font-size: 16px;
 	}
 }

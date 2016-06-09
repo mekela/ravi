@@ -92,6 +92,7 @@
 				font-size: 19px;
 				width: 90px;
 				padding: 0 22px 0 0;
+				height: auto;
 			}
 		}
 		.logo{
@@ -173,6 +174,81 @@
 			box-shadow: 0 3px 5px rgba(0,0,1,.17);
 		}
 	}
+
+	.content_txt{
+		width: 867px;
+		margin: 0 auto;
+		color: #0c0c0c;
+		font-family: $fontfamily;
+		h1{
+			text-align: center;
+			font-family: $fontfamily;
+			font-size: 54px;
+			padding-bottom: 45px;
+		}
+		p{
+			padding: 30px 0 0 0;
+			line-height: 31px;
+			font-size: 15px;
+		}
+	}
+		.date{
+			text-align: center;
+			font-size: 16px;
+			padding-bottom: 19px;
+			font-family: $fontfamily;
+		}
+		.pager{
+			@include povh('');
+			padding:20px 0;
+			border-top: 1px solid #0c0c0c;
+			border-bottom: 1px solid #0c0c0c;
+		}
+
+		.form{
+			padding: 45px 0 70px 0 ;
+		}
+			.form_line{
+				@include povh('');
+				padding-bottom: 28px;
+				font-size: 0;
+				& > div{
+					padding: 0 30px 0 0;
+					display: inline-block;
+					&:last-child{
+						padding: 0;
+					}
+				}
+				input{
+					vertical-align: top;
+					font-family: $fontfamily;
+					&.kapha{
+						width: 145px;
+						
+					}
+				}
+				textarea{
+					width: 100%;
+					height: 190px;
+				}
+				label{
+				  vertical-align: top;
+				  height: 64px;
+				  box-sizing: border-box;
+				  text-align: center;
+				  line-height: 64px;
+				  display: inline-block;
+				  width: 120px;
+				  color: #0c0c0c;
+				  font-size: 18px;
+				  font-weight: normal;
+				  font-family: $fontfamily;
+				  border: 1px solid #cecece;
+				}
+				&.button{
+					font-family: $ffamily;
+				}
+			}
 /*----------end main----------*/	
 
 	

@@ -101,6 +101,8 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   color: inherit;
   font-weight: normal;
+  text-align: center;
+  font-family: "Lora", serif;
 }
 
 h1 {
@@ -108,23 +110,23 @@ h1 {
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 30px;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 28px;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 27px;
 }
 
 h5 {
-  font-size: 16px;
+  font-size: 26px;
 }
 
 h6 {
-  font-size: 14px;
+  font-size: 24px;
 }
 
 .button {
@@ -147,15 +149,14 @@ h6 {
 }
 
 input[type=text], input[type=email], input[type=tel], input[type=search], input[type=password], input[type=date], input[type=url], textarea {
-  width: 300px;
-  height: 25px;
+  width: 270px;
+  height: 64px;
   box-sizing: border-box;
-  padding: 0 5px;
-  color: #000;
-  font-size: 14px;
+  padding: 0 20px;
+  color: #0c0c0c;
+  font-size: 18px;
   font-family: "Kepler";
-  border: 1px solid #000;
-  border-radius: 3px;
+  border: 1px solid #cecece;
   resize: none;
 }
 
@@ -174,7 +175,7 @@ input:-moz-placeholder {
 
 textarea {
   height: 90px;
-  padding-top: 5px;
+  padding: 20px;
 }
 
 .modal {
@@ -350,6 +351,7 @@ textarea {
   font-size: 19px;
   width: 90px;
   padding: 0 22px 0 0;
+  height: auto;
 }
 
 .logo {
@@ -441,6 +443,94 @@ textarea {
   box-shadow: 0 3px 5px rgba(0, 0, 1, 0.17);
 }
 
+.content_txt {
+  width: 867px;
+  margin: 0 auto;
+  color: #0c0c0c;
+  font-family: "Lora", serif;
+}
+
+.content_txt h1 {
+  text-align: center;
+  font-family: "Lora", serif;
+  font-size: 54px;
+  padding-bottom: 45px;
+}
+
+.content_txt p {
+  padding: 30px 0 0 0;
+  line-height: 31px;
+  font-size: 15px;
+}
+
+.date {
+  text-align: center;
+  font-size: 16px;
+  padding-bottom: 19px;
+  font-family: "Lora", serif;
+}
+
+.pager {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+  border-top: 1px solid #0c0c0c;
+  border-bottom: 1px solid #0c0c0c;
+}
+
+.form {
+  padding: 45px 0 70px 0;
+}
+
+.form_line {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 28px;
+  font-size: 0;
+}
+
+.form_line > div {
+  padding: 0 30px 0 0;
+  display: inline-block;
+}
+
+.form_line > div:last-child {
+  padding: 0;
+}
+
+.form_line input {
+  vertical-align: top;
+  font-family: "Lora", serif;
+}
+
+.form_line input.kapha {
+  width: 145px;
+}
+
+.form_line textarea {
+  width: 100%;
+  height: 190px;
+}
+
+.form_line label {
+  vertical-align: top;
+  height: 64px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 64px;
+  display: inline-block;
+  width: 120px;
+  color: #0c0c0c;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: "Lora", serif;
+  border: 1px solid #cecece;
+}
+
+.form_line.button {
+  font-family: "Kepler";
+}
+
 /*----------end main----------*/
 /*----------footer----------*/
 .footer {
@@ -478,6 +568,22 @@ textarea {
   }
   .social img {
     max-width: 100%;
+  }
+  .content_txt {
+    width: 100%;
+  }
+  .content_txt img {
+    max-width: 100%;
+  }
+  .form_line > div {
+    display: block;
+    padding: 0 0 20px 0;
+  }
+  .form_line > div input {
+    width: 100%;
+  }
+  .form_line > div:last-child {
+    text-align: center;
   }
 }
 
@@ -570,5 +676,8 @@ textarea {
   }
   .navbar {
     margin-bottom: 5px;
+  }
+  .button {
+    font-size: 16px;
   }
 }
