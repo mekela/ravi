@@ -531,6 +531,23 @@ textarea {
   font-family: "Kepler";
 }
 
+.page_txt {
+  color: #0c0c0c;
+  font-family: "Lora", serif;
+  font-size: 15px;
+  line-height: 27px;
+  padding: 0 0 75px 0;
+}
+
+.page_txt h1 {
+  font-size: 42px;
+  padding-bottom: 55px;
+}
+
+.page_txt p {
+  padding-bottom: 15px;
+}
+
 /*----------end main----------*/
 /*----------footer----------*/
 .footer {
@@ -664,6 +681,9 @@ textarea {
   .header {
     padding-top: 90px;
     padding-bottom: 30px;
+  }
+  .content_txt h1, .content_txt h2, .page_txt h1 {
+    font-size: 24px;
   }
 }
 
