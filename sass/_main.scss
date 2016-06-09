@@ -163,6 +163,13 @@
 					transform: translateY(-50%);
 				}
 			}
+
+	.gallery{
+		img{
+			display: block;
+			box-shadow: 0 3px 5px rgba(0,0,1,.17);
+		}
+	}
 /*----------end main----------*/	
 
 	
@@ -170,6 +177,18 @@
  
  .footer{
 	@include povh('');
+	padding: 45px 0 15px 0 ;
+	address{
+		display: block;
+		text-align: center;
+		font-size: 18px;
+		color: #000;
+		font-style: normal;
+		font-family: $fontfamily;
+	}
  }
+ 	.social{
+ 		padding-bottom: 40px;
+ 	}
 
 /*----------end footer----------*/

@@ -432,11 +432,30 @@ textarea {
   transform: translateY(-50%);
 }
 
+.gallery img {
+  display: block;
+  box-shadow: 0 3px 5px rgba(0, 0, 1, 0.17);
+}
+
 /*----------end main----------*/
 /*----------footer----------*/
 .footer {
   position: relative;
   overflow: hidden;
+  padding: 45px 0 15px 0;
+}
+
+.footer address {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: #000;
+  font-style: normal;
+  font-family: "Lora", serif;
+}
+
+.social {
+  padding-bottom: 40px;
 }
 
 /*----------end footer----------*/
