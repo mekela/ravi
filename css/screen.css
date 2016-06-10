@@ -129,7 +129,7 @@ h6 {
   font-size: 24px;
 }
 
-.button {
+.button, .pager a {
   background: #0c0c0c;
   border-radius: 0px;
   font-family: "Kepler";
@@ -143,7 +143,7 @@ h6 {
   -webkit-appearance: none;
 }
 
-.button:hover {
+.button:hover, .pager a:hover {
   opacity: 0.9;
   color: #fff;
 }
@@ -311,11 +311,15 @@ textarea {
   display: block;
 }
 
+.head_top .has-regularmenu:hover .under_menu {
+  display: block;
+}
+
 .head_top .dropdown-menu {
   background-color: #ededed;
   border-radius: 0;
   border: none;
-  margin-top: 27px !important;
+  margin-top: 0 !important;
   box-shadow: 0 2px 5px rgba(0, 0, 1, 0.26);
 }
 
@@ -338,6 +342,11 @@ textarea {
   font-size: 14px;
   line-height: 1;
   color: #000;
+}
+
+.under_menu {
+  display: none;
+  padding: 27px 0 0 0;
 }
 
 .search {
@@ -379,7 +388,7 @@ textarea {
   padding-bottom: 50px;
 }
 
-.photos_wrap .button {
+.photos_wrap .button, .photos_wrap .pager a, .pager .photos_wrap a {
   margin-top: 30px;
 }
 
@@ -486,6 +495,53 @@ textarea {
   padding: 45px 0 70px 0;
 }
 
+.form input[type=submit] {
+  background: #0c0c0c;
+  border-radius: 0px;
+  font-family: "Kepler";
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 25px;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  display: inline-block;
+  -webkit-appearance: none;
+}
+
+.form input {
+  vertical-align: top;
+  font-family: "Lora", serif;
+}
+
+.form input.kapha {
+  width: 145px;
+}
+
+.form textarea {
+  width: 100%;
+  height: 190px;
+}
+
+.form label {
+  vertical-align: top;
+  height: 64px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 64px;
+  display: inline-block;
+  width: 120px;
+  color: #0c0c0c;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: "Lora", serif;
+  border: 1px solid #cecece;
+}
+
+.form.button, .pager a.form {
+  font-family: "Kepler";
+}
+
 .form_line {
   position: relative;
   overflow: hidden;
@@ -531,7 +587,7 @@ textarea {
   border: 1px solid #cecece;
 }
 
-.form_line.button {
+.form_line.button, .pager a.form_line {
   font-family: "Kepler";
 }
 
@@ -574,6 +630,10 @@ textarea {
 }
 
 /*----------end footer----------*/
+#email-notes {
+  display: none;
+}
+
 @media only screen and (max-width: 1000px) {
   .logo_big img {
     width: 100%;
@@ -701,7 +761,7 @@ textarea {
   .navbar {
     margin-bottom: 5px;
   }
-  .button {
+  .button, .pager a {
     font-size: 16px;
   }
 }

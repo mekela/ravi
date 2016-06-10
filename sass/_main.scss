@@ -56,12 +56,15 @@
 			.dropdown-menu{
 				display: block;
 			}
+			.under_menu{
+				display: block;
+			}
 		}
 		.dropdown-menu{
 			background-color: #ededed;
 			border-radius: 0;
 			border: none;
-			margin-top: 27px !important;
+			margin-top: 0 !important;
 			box-shadow: 0 2px 5px rgba(0,0,1,.26);
 			li {
 				margin: 0;
@@ -84,7 +87,12 @@
 				}
 			}
 		}
+	}	
+	.under_menu{
+		display: none;
+		padding: 27px 0 0 0;
 	}
+
 		.search{
 			display: inline-block;
 			width: 110px;
@@ -210,10 +218,45 @@
 			padding:20px 0;
 			border-top: 1px solid #0c0c0c;
 			border-bottom: 1px solid #0c0c0c;
+			a{
+				@extend .button;
+			}
 		}
 
 		.form{
 			padding: 45px 0 70px 0 ;
+			input[type=submit]{
+				@include button(button);
+			}
+			input{
+					vertical-align: top;
+					font-family: $fontfamily;
+					&.kapha{
+						width: 145px;
+						
+					}
+			}
+			textarea{
+				width: 100%;
+				height: 190px;
+			}
+			label{
+			  vertical-align: top;
+			  height: 64px;
+			  box-sizing: border-box;
+			  text-align: center;
+			  line-height: 64px;
+			  display: inline-block;
+			  width: 120px;
+			  color: #0c0c0c;
+			  font-size: 18px;
+			  font-weight: normal;
+			  font-family: $fontfamily;
+			  border: 1px solid #cecece;
+			}
+			&.button{
+				font-family: $ffamily;
+			}
 		}
 			.form_line{
 				@include povh('');
@@ -293,3 +336,8 @@
  	}
 
 /*----------end footer----------*/
+
+
+#email-notes{
+	display: none;
+}
