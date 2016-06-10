@@ -91,6 +91,7 @@
 	.under_menu{
 		display: none;
 		padding: 27px 0 0 0;
+		position: relative;
 	}
 
 		.search{
@@ -258,12 +259,15 @@
 				font-family: $ffamily;
 			}
 		}
+			.comment-notes{
+				display: none;
+			}
 			.form_line{
 				@include povh('');
 				padding-bottom: 28px;
 				font-size: 0;
 				& > div{
-					padding: 0 30px 0 0;
+					padding: 0 27px 0 0;
 					display: inline-block;
 					&:last-child{
 						padding: 0;
