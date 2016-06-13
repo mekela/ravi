@@ -5,7 +5,7 @@
  .header{
 	@include povh('');
 	padding-top: 190px;
-	padding-bottom: 135px;
+	padding-bottom: 70px;
 	.container{
 		//background:red;
 	}
@@ -117,7 +117,12 @@
 			display: none;
 		}
 
-	
+	@include mq($min-width: 1000px) {
+		.head_top .navbar{
+			position: relative;
+			left: 35px
+		}
+	}
 /*----------end-header----------*/	
 
 
@@ -187,7 +192,12 @@
 	.gallery{
 		img{
 			display: block;
+			width: 100%;
 			box-shadow: 0 3px 5px rgba(0,0,1,.17);
+		}
+		.col-xs-4, .col-sm-4{
+			padding-left: 2px;
+			padding-right: 2px;
 		}
 	}
 
@@ -211,6 +221,7 @@
 		.date{
 			text-align: center;
 			font-size: 16px;
+			text-transform: uppercase;
 			padding-bottom: 19px;
 			font-family: $fontfamily;
 		}
@@ -325,7 +336,7 @@
  
  .footer{
 	@include povh('');
-	padding: 45px 0 15px 0 ;
+	padding: 45px 0 55px 0 ;
 	address{
 		display: block;
 		text-align: center;

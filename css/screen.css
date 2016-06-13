@@ -254,7 +254,7 @@ textarea {
   position: relative;
   overflow: hidden;
   padding-top: 190px;
-  padding-bottom: 135px;
+  padding-bottom: 70px;
 }
 
 .head_top {
@@ -377,6 +377,13 @@ textarea {
   display: none;
 }
 
+@media only screen and (min-width: 1000px) {
+  .head_top .navbar {
+    position: relative;
+    left: 35px;
+  }
+}
+
 /*----------end-header----------*/
 /*----------main----------*/
 .main {
@@ -454,7 +461,13 @@ textarea {
 
 .gallery img {
   display: block;
+  width: 100%;
   box-shadow: 0 3px 5px rgba(0, 0, 1, 0.17);
+}
+
+.gallery .col-xs-4, .gallery .col-sm-4 {
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .content_txt {
@@ -480,6 +493,7 @@ textarea {
 .date {
   text-align: center;
   font-size: 16px;
+  text-transform: uppercase;
   padding-bottom: 19px;
   font-family: "Lora", serif;
 }
@@ -618,7 +632,7 @@ textarea {
 .footer {
   position: relative;
   overflow: hidden;
-  padding: 45px 0 15px 0;
+  padding: 45px 0 55px 0;
 }
 
 .footer address {
@@ -670,6 +684,12 @@ textarea {
   }
   .form_line > div:last-child {
     text-align: center;
+  }
+  .photos_wrap .button, .photos_wrap .pager a, .pager .photos_wrap a {
+    width: 350px;
+    height: 87px;
+    font-size: 30px;
+    line-height: 67px;
   }
 }
 
@@ -748,11 +768,24 @@ textarea {
     width: 86px;
   }
   .header {
-    padding-top: 90px;
+    padding-top: 130px;
     padding-bottom: 30px;
   }
   .content_txt h1, .content_txt h2, .page_txt h1 {
     font-size: 24px;
+  }
+  .gallery .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .photos_wrap .col-xs-6 {
+    width: 100%;
+  }
+  .photos_wrap .button, .photos_wrap .pager a, .pager .photos_wrap a {
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    line-height: 1.2;
   }
 }
 
