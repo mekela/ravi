@@ -700,6 +700,22 @@ textarea {
   padding-bottom: 40px;
 }
 
+.social a {
+  display: inline-block;
+  width: 178px;
+  height: 41px;
+  line-height: 41px;
+  color: #4a4a4a;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 18px;
+  background: url(../img/social.png) no-repeat center;
+}
+
+.photo_block_desc a:hover, .photo_block_desc a:active, .photo_block_desc a:focus {
+  color: #fff;
+}
+
 /*----------end footer----------*/
 #email-notes {
   display: none;
