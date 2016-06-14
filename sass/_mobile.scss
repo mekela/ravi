@@ -59,6 +59,10 @@
 	.logo{
 		font-size: 24px;
 	}
+	
+	.photos_col{
+		column-count: 2;
+	}
 }
 
 @include mq($max-width: 800px) {
@@ -165,6 +169,10 @@
   		line-height: 1.2
   	}
   	}
+
+  	.photos_col{
+		column-count: 1;
+	}
 
 
 }
