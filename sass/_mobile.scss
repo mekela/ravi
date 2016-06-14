@@ -3,10 +3,16 @@
 
 
 //styles for custom device width
+@include mq($max-width: 1200px) {
+	.head_top .nav a{
+		padding: 0 21px;
+	}
+}
 @include mq($max-width: 1000px) {
   .logo_big{
   	img{
   		width: 100%;
+  		max-width: 100%;
   	}
   }
   	.head_top .nav a{
@@ -50,7 +56,9 @@
   		line-height: 67px
   	}
   }
-
+	.logo{
+		font-size: 24px;
+	}
 }
 
 @include mq($max-width: 800px) {

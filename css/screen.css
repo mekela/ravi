@@ -264,7 +264,7 @@ textarea {
   left: 0;
   top: 0;
   width: 100%;
-  height: 80px;
+  height: 70px;
   box-shadow: 0 2px 18px rgba(0, 0, 1, 0.56);
 }
 
@@ -283,7 +283,7 @@ textarea {
 }
 
 .head_top .nav li {
-  margin: 19px 0 0 0;
+  margin: 16px 0 0 0;
   padding: 0 10px;
   border-left: 1px solid #fff;
   height: 33px;
@@ -369,8 +369,19 @@ textarea {
 }
 
 .logo {
-  margin: 25px 0 0 0;
+  margin: 20px 0 0 0;
   display: block;
+  text-decoration: none;
+  font-size: 30px;
+  color: #fff;
+  font-family: "Lora", serif;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.logo:hover, .logo:active, .logo:focus, .logo:visited {
+  color: #fff;
+  text-decoration: none;
 }
 
 .show_mobile {
@@ -404,10 +415,29 @@ textarea {
   position: relative;
   overflow: hidden;
   margin-bottom: 20px;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .photo_block > img {
   display: block;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.photo_block:hover img {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.photo_block:hover .photo_block_desc {
+  opacity: 1;
 }
 
 .photo_block.photo_block_about {
@@ -423,6 +453,7 @@ textarea {
 .photo_block.photo_block_about img {
   display: inline-block;
   margin-bottom: 35px;
+  filter: blur(0px);
 }
 
 .photo_block.photo_block_about h2 {
@@ -431,15 +462,30 @@ textarea {
   font-family: "Lora", serif;
 }
 
+.photo_block.photo_block_about:hover img {
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
+}
+
 .photo_block_desc {
   position: absolute;
   left: 0;
   top: 0;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
   text-align: center;
   color: #fff;
+}
+
+.photo_block_desc a {
+  text-decoration: none;
 }
 
 .photo_block_desc h5 {
@@ -653,9 +699,16 @@ textarea {
   display: none;
 }
 
+@media only screen and (max-width: 1200px) {
+  .head_top .nav a {
+    padding: 0 21px;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   .logo_big img {
     width: 100%;
+    max-width: 100%;
   }
   .head_top .nav a {
     padding: 0;
@@ -690,6 +743,9 @@ textarea {
     height: 87px;
     font-size: 30px;
     line-height: 67px;
+  }
+  .logo {
+    font-size: 24px;
   }
 }
 
