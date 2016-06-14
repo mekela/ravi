@@ -707,6 +707,7 @@ textarea {
   line-height: 41px;
   color: #4a4a4a;
   margin: 0 10px;
+  margin-bottom: 20px;
   text-decoration: none;
   font-size: 18px;
   background: url(../img/social.png) no-repeat center;
