@@ -489,6 +489,11 @@ textarea {
   text-align: center;
   color: #fff;
   z-index: 10;
+  text-decoration: none;
+}
+
+.photo_block_desc:hover, .photo_block_desc:active {
+  color: #fff;
 }
 
 .photo_block_desc a {
@@ -554,6 +559,7 @@ textarea {
   position: relative;
   overflow: hidden;
   padding: 20px 0;
+  margin-bottom: 42px;
   border-top: 1px solid #0c0c0c;
   border-bottom: 1px solid #0c0c0c;
 }
@@ -728,10 +734,20 @@ textarea {
   }
 }
 
+@media only screen {
+  .photo_block {
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   .logo_big img {
     width: 100%;
     max-width: 100%;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
   }
   .head_top .nav a {
     padding: 0;
@@ -871,6 +887,21 @@ textarea {
   }
   .photos_col {
     column-count: 1;
+  }
+  .photos_wrap .photo_block {
+    /*margin-left:21px;
+		
+		width: calc(100% - 42px)*/
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+  .photos_wrap .photo_block_about {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 21px;
+    width: calc(100% - 42px);
+    padding-left: 21px;
+    padding-right: 21px;
   }
 }
 
