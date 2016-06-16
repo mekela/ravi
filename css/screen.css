@@ -402,6 +402,20 @@ textarea {
   overflow: hidden;
 }
 
+.main ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.main ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+#sb_instagram .sb_instagram_header {
+  display: none;
+}
+
 .photos_wrap {
   position: relative;
   padding-bottom: 50px;
@@ -514,6 +528,8 @@ textarea {
   position: absolute;
   top: 30%;
   width: 100%;
+  box-sizing: border-box;
+  padding: 0 15px;
 }
 
 .gallery img {

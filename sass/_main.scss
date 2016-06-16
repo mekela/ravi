@@ -140,7 +140,18 @@
  
  .main{
 	@include povh('');
+	ul{
+		list-style-type: disc;
+		list-style-position: inside;
+	}
+	ol{
+		list-style-type: decimal;
+		list-style-position: inside;
+	}
  }
+ 	#sb_instagram .sb_instagram_header{
+ 		display: none;
+ 	}
 	
 	.photos_wrap{
 		position: relative;
@@ -230,6 +241,8 @@
 					position:absolute;
 				  	top: 30%;
 				  	width: 100%;
+				  	box-sizing: border-box;
+				  	padding: 0 15px;
 					//transform: translateY(-50%);
 				}
 			}
