@@ -253,7 +253,7 @@ textarea {
 .header {
   position: relative;
   overflow: hidden;
-  padding-top: 190px;
+  padding-top: 130px;
   padding-bottom: 70px;
 }
 
@@ -712,7 +712,7 @@ textarea {
 .footer address {
   display: block;
   text-align: center;
-  font-size: 18px;
+  font-size: 14px;
   color: #000;
   font-style: normal;
   font-family: "Lora", serif;
@@ -737,6 +737,11 @@ textarea {
 
 .photo_block_desc a:hover, .photo_block_desc a:active, .photo_block_desc a:focus {
   color: #fff;
+}
+
+#sbi_load, .sbi_load {
+  display: none;
+  opacity: 0;
 }
 
 /*----------end footer----------*/
