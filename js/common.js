@@ -13,6 +13,16 @@ $(document).ready(function() {
 	  $( this ).addClass('active');
 	});
 
+	$( ".fixed_search_close" ).click(function() {
+	  $(this).hide();
+	  $(".fixed_search_block").hide();
+	});
+
+	$( ".search" ).click(function() {
+	  $(".fixed_search_close").show();
+	  $(".fixed_search_block").show();
+	});
+
 });
 
 $(document).ready(function() {
