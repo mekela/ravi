@@ -123,7 +123,7 @@
 				padding: 0 22px 0 0;
 				height: auto;
 				font-family: $american ;
-				
+
 			}
 		}
 		.logo{
@@ -189,7 +189,7 @@
 		.photo_block{
 			@include povh('');
 			width: 369px;
-			margin-bottom: 20px;
+			margin-bottom: 8px;
 			display: inline-block;
 			@include transition(all 0.5s);
 			& > img{
