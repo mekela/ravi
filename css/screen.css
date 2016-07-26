@@ -7,6 +7,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: American;
+  src: url("../fonts/AmericanTypewriterRegular.eot");
+  src: url("../fonts/AmericanTypewriterRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/AmericanTypewriterRegular.woff") format("woff"), url("../fonts/AmericanTypewriterRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5,
 h6, p, blockquote, pre, a, abbr, acronym, address, big,
 cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
@@ -86,6 +94,7 @@ body {
   font-weight: normal;
   font-size: 12px;
   line-height: 1.4;
+  background: #f6f6f6;
 }
 
 a {
@@ -250,22 +259,24 @@ textarea {
 }
 
 /*----------header----------*/
+.container {
+  width: 940px;
+}
+
 .header {
   position: relative;
   overflow: hidden;
-  padding-top: 130px;
-  padding-bottom: 70px;
+  padding-top: 0px;
 }
 
 .head_top {
-  background: #0c0c0c;
+  background: #f6f6f6;
   position: fixed;
   z-index: 100;
   left: 0;
   top: 0;
   width: 100%;
   height: 70px;
-  box-shadow: 0 2px 18px rgba(0, 0, 1, 0.56);
 }
 
 .head_top .navbar-default {
@@ -285,17 +296,19 @@ textarea {
 .head_top .nav li {
   margin: 16px 0 0 0;
   padding: 0 10px;
-  border-left: 1px solid #fff;
+  border-left: 1px solid #d1d1d1;
   height: 33px;
 }
 
 .head_top .nav a {
-  color: #fff;
-  font-size: 19px;
+  color: #2d2d2d;
+  font-size: 18px;
   height: 33px;
-  padding: 0 30px;
+  padding: 0 2px;
   display: block;
   line-height: 33px;
+  font-family: "American";
+  text-transform: uppercase;
   text-decoration: none;
 }
 
@@ -316,7 +329,7 @@ textarea {
 }
 
 .head_top .dropdown-menu {
-  background-color: #ededed;
+  background-color: #f6f6f6;
   border-radius: 0;
   border: none;
   margin-top: 0 !important;
@@ -337,16 +350,16 @@ textarea {
 .head_top .dropdown-menu li a {
   padding: 15px 0;
   height: auto;
-  border-top: 1px solid #d4d4d4;
+  border-top: 1px solid #2d2d2d;
   display: block;
   font-size: 14px;
   line-height: 1;
-  color: #000;
+  color: #2d2d2d;
 }
 
 .under_menu {
   display: none;
-  padding: 27px 0 0 0;
+  padding: 20px 0 0 0;
   position: relative;
 }
 
@@ -373,11 +386,12 @@ textarea {
 .search input {
   background: url(../img/search.png) no-repeat right center;
   border: none;
-  color: #fff;
+  color: #2d2d2d;
   font-size: 19px;
   width: 90px;
   padding: 0 22px 0 0;
   height: auto;
+  font-family: "American";
 }
 
 .logo {
@@ -385,19 +399,25 @@ textarea {
   display: block;
   text-decoration: none;
   font-size: 30px;
-  color: #fff;
+  color: #2d2d2d;
   font-family: "Lora", serif;
   text-transform: uppercase;
   line-height: 1;
+  font-weight: bold;
 }
 
 .logo:hover, .logo:active, .logo:focus, .logo:visited {
-  color: #fff;
+  color: #2d2d2d;
   text-decoration: none;
 }
 
 .show_mobile {
   display: none;
+}
+
+.head_bottom {
+  padding-top: 120px;
+  padding-bottom: 70px;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -569,6 +589,10 @@ textarea {
   padding-bottom: 45px;
 }
 
+.content_txt h2 {
+  font-size: 22px;
+}
+
 .content_txt p {
   padding: 30px 0 0 0;
   line-height: 31px;
@@ -587,13 +611,13 @@ textarea {
   position: relative;
   overflow: hidden;
   padding: 20px 0;
-  margin-bottom: 42px;
+  margin-bottom: 22px;
   border-top: 1px solid #0c0c0c;
   border-bottom: 1px solid #0c0c0c;
 }
 
 .form {
-  padding: 45px 0 70px 0;
+  padding: 25px 0 70px 0;
 }
 
 .form input[type=submit] {
@@ -674,7 +698,7 @@ textarea {
 
 .form_line textarea {
   width: 100%;
-  height: 190px;
+  height: 160px;
 }
 
 .form_line label {
@@ -757,6 +781,10 @@ textarea {
 }
 
 /*----------end footer----------*/
+.page-content {
+  margin-top: -80px;
+}
+
 #email-notes {
   display: none;
 }
@@ -767,38 +795,71 @@ textarea {
 
 .fixed_search_close {
   position: fixed;
-  display: none;
-  z-index: 500;
+  z-index: -5;
+  opacity: 0;
   top: 0;
   left: 0;
   width: 100%;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -webkit-transition: all 1s;
+  -ms-transition: all 1s;
+  transition: all 1s;
   height: 100%;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.fixed_search_close.active {
+  display: block;
+  z-index: 500;
+  opacity: 1;
 }
 
 .fixed_search_block {
   position: fixed;
-  z-index: 500;
+  z-index: -5;
+  opacity: 0;
   top: 50%;
-  display: none;
   left: 50%;
-  margin-left: -300px;
-  margin-top: -35px;
-  width: 600px;
-  height: 70px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.75);
+  margin-left: -550px;
+  margin-top: -70px;
+  width: 900px;
+  height: 140px;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -webkit-transition: all 1s;
+  -ms-transition: all 1s;
+  transition: all 1s;
+  box-sizing: border-box;
 }
 
 .fixed_search_block input {
+  border: none;
   width: 100%;
   height: 70px;
-  border: 2px solid #000;
-  font-size: 25px;
-  text-transform: uppercase;
+  border-bottom: 2px solid #000;
+  font-size: 30px;
+  background: none;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.fixed_search_block.active {
+  display: block;
+  z-index: 500;
+  opacity: 1;
+  margin-left: -450px;
+}
+
+.form input[type=submit] {
+  margin-top: -25px;
 }
 
 @media only screen and (max-width: 1200px) {
   .head_top .nav a {
-    padding: 0 21px;
+    padding: 0 9px;
   }
 }
 
@@ -809,9 +870,15 @@ textarea {
 }
 
 @media only screen and (max-width: 1000px) {
+  .container {
+    width: auto;
+  }
   .logo_big img {
     width: 100%;
     max-width: 100%;
+  }
+  .navbar-toggle .icon-bar {
+    background: #000;
   }
   img {
     max-width: 100%;
@@ -857,6 +924,17 @@ textarea {
   .photos_col {
     column-count: 2;
   }
+  .fixed_search_block {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-left: 0;
+    height: auto;
+    left: 0;
+  }
+  .fixed_search_block.active {
+    margin-left: 0px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -864,7 +942,7 @@ textarea {
     margin-top: -37px;
   }
   .navbar-toggle .icon-bar {
-    background: #fff;
+    background: #000;
   }
   .head_top {
     height: auto;
@@ -908,6 +986,30 @@ textarea {
   }
   .navbar-toggle {
     margin-right: 0;
+  }
+  .head_top .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .dropdown-menu li a {
+    padding: 5px 0;
+    text-align: right;
+    display: block;
+  }
+  .head_top .dropdown-menu li a {
+    padding: 15px 0;
+    height: auto;
+    border-top: 1px solid #d4d4d4;
+    display: block;
+    font-size: 14px;
+    line-height: 1;
+    color: #fff;
   }
 }
 
@@ -978,6 +1080,37 @@ textarea {
     margin-left: 0;
     left: 0;
   }
+  .photo_block_desc {
+    background: none;
+  }
+  .head_bottom {
+    padding-top: 0;
+  }
+}
+
+@media only screen and (min-width: 385px) and (max-width: 415px) {
+  .form input[type=submit] {
+    margin-top: -92px;
+  }
+  .form input[type=submit] {
+    background: #0c0c0c;
+    border-radius: 0px;
+    font-family: "Kepler";
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 7px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    display: inline-block;
+    -webkit-appearance: none;
+  }
+  .form .form-submit {
+    float: right;
+  }
+  .form .cptch_block {
+    float: left;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -992,5 +1125,25 @@ textarea {
   }
   .button, .pager a {
     font-size: 16px;
+  }
+  #sb_instagram .sbi_photo {
+    height: 155px !important;
+  }
+  #sb_instagram.sbi_col_10 #sbi_images .sbi_item, #sb_instagram.sbi_col_3 #sbi_images .sbi_item, #sb_instagram.sbi_col_4 #sbi_images .sbi_item, #sb_instagram.sbi_col_5 #sbi_images .sbi_item, #sb_instagram.sbi_col_6 #sbi_images .sbi_item, #sb_instagram.sbi_col_7 #sbi_images .sbi_item, #sb_instagram.sbi_col_8 #sbi_images .sbi_item, #sb_instagram.sbi_col_9 #sbi_images .sbi_item {
+    width: 50% !important;
+  }
+  .head_bottom {
+    padding-top: 0;
+    padding-bottom: 0px;
+  }
+  .photo_block_desc {
+    background: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    padding-top: 70px;
+    padding-bottom: 30px;
   }
 }

@@ -14,13 +14,14 @@ $(document).ready(function() {
 	});
 
 	$( ".fixed_search_close" ).click(function() {
-	  $(this).hide();
-	  $(".fixed_search_block").hide();
+	  $(this).removeClass('active');
+	  $(".fixed_search_block").removeClass('active');
 	});
 
 	$( ".search" ).click(function() {
-	  $(".fixed_search_close").show();
-	  $(".fixed_search_block").show();
+	  $(".fixed_search_close").addClass('active');
+	  $(".fixed_search_block").addClass('active');
+	  $( ".fixed_search_block input" ).focus();
 	});
 
 });

@@ -1,24 +1,26 @@
 // Normally mainpage styles
  
  /*----------header----------*/
-
+.container{
+	width: 940px;
+}
  .header{
 	@include povh('');
-	padding-top: 130px;
-	padding-bottom: 70px;
+	padding-top: 0px;
+	
 	.container{
 		//background:red;
 	}
  }
 	.head_top{
-		background:#0c0c0c;
+		background:#f6f6f6;
 		position: fixed;
 		z-index: 100;
 		left: 0;
 		top: 0;
 		width: 100%;
 		height: 70px;
-		box-shadow: 0 2px 18px rgba(0,0,1,.56);
+		//box-shadow: 0 2px 18px rgba(0,0,1,.56);
 		.navbar-default{
 			background: none;
 			border-radius: 0;
@@ -32,16 +34,18 @@
 			li{
 				margin: 16px 0 0 0;
 				padding: 0 10px;
-				border-left: 1px solid #fff;
+				border-left: 1px solid #d1d1d1;
 				height: 33px;
 			}
 			a{
-				color: #fff;
-				font-size: 19px;
+				color: #2d2d2d;
+				font-size: 18px;
 				height: 33px;
-				padding: 0 30px;
+				padding: 0 2px;
 				display: block;
 				line-height: 33px;
+				font-family: $american ;
+				text-transform: uppercase;
 				text-decoration: none;
 				&:hover, &:focus, &:active{
 					background: none;
@@ -61,7 +65,7 @@
 			}
 		}
 		.dropdown-menu{
-			background-color: #ededed;
+			background-color: #f6f6f6; 
 			border-radius: 0;
 			border: none;
 			margin-top: 0 !important;
@@ -79,18 +83,18 @@
 				a{
 					padding: 15px 0;
 					height: auto;
-					border-top: 1px solid #d4d4d4;
+					border-top: 1px solid #2d2d2d;
 					display: block;
 					font-size: 14px;
 					line-height: 1;
-					color: #000;
+					color: #2d2d2d;
 				}
 			}
 		}
 	}	
-	.under_menu{
+	.under_menu{ 
 		display: none;
-		padding: 27px 0 0 0;
+		padding: 20px 0 0 0;
 		position: relative;
 	}
 
@@ -113,11 +117,13 @@
 			input{
 				background: url(../img/search.png) no-repeat right center;
 				border: none;
-				color: #fff;
+				color: #2d2d2d;
 				font-size: 19px;
 				width: 90px;
 				padding: 0 22px 0 0;
 				height: auto;
+				font-family: $american ;
+				
 			}
 		}
 		.logo{
@@ -125,18 +131,23 @@
 			display: block;
 			text-decoration: none;
 			font-size: 30px;
-			color: #fff;
+			color: #2d2d2d;
 			font-family: $fontfamily;
 			text-transform: uppercase;
 			line-height: 1;
+			font-weight: bold;
 			&:hover, &:active, &:focus, &:visited{
-				color: #fff;
+				color: #2d2d2d;
 				text-decoration: none;
 			}
 		}
 		.show_mobile{
 			display: none;
 		}
+	.head_bottom{
+		padding-top: 120px;
+		padding-bottom: 70px;
+	}
 
 	@include mq($min-width: 1000px) {
 		.head_top .navbar{
@@ -281,6 +292,9 @@
 			font-size: 54px;
 			padding-bottom: 45px;
 		}
+		h2{
+			font-size: 22px;
+		}
 		p{
 			padding: 30px 0 0 0;
 			line-height: 31px;
@@ -297,7 +311,7 @@
 		.pager{
 			@include povh('');
 			padding:20px 0;
-			margin-bottom: 42px;
+			margin-bottom: 22px;
 			border-top: 1px solid #0c0c0c;
 			border-bottom: 1px solid #0c0c0c;
 			a{
@@ -306,7 +320,7 @@
 		}
 
 		.form{
-			padding: 45px 0 70px 0 ;
+			padding: 25px 0 70px 0 ;
 			input[type=submit]{
 				@include button(button);
 			}
@@ -364,7 +378,7 @@
 				}
 				textarea{
 					width: 100%;
-					height: 190px;
+					height: 160px;
 				}
 				label{
 				  vertical-align: top;
@@ -445,7 +459,9 @@
 }
 /*----------end footer----------*/
 
-
+.page-content{
+	margin-top: -80px;
+}
 #email-notes{
 	display: none;
 }
@@ -455,29 +471,53 @@
 }
 	.fixed_search_close{
 		position: fixed;
-		display: none;
-		z-index: 500;
+		z-index: -5;
+		opacity: 0;
 		top: 0;
 		left: 0;
 		width: 100%;
+		@include transition(all 1s);
 		height: 100%;
-		background:rgba(255,255,255, 0.8);
+		background:rgba(255,255,255, 0.7);
+		&.active{
+			display: block;
+			z-index: 500;
+			opacity: 1;
+		}
 	}
 	.fixed_search_block{
 		position: fixed;
-		z-index: 500;
+		z-index: -5;
+		opacity: 0;
 		top: 50%;
-		display: none;
 		left: 50%;
-		margin-left: -300px;
-		margin-top: -35px;
-		width: 600px;
-		height: 70px;
+		padding: 40px;
+    	background: rgba(255, 255, 255, 0.75);
+		margin-left: -550px;
+		margin-top: -70px;
+		width: 900px;
+		height: 140px;
+		@include transition(all 1s);
+		box-sizing: border-box;
 		input{
+			border: none;
 			width: 100%;
 			height: 70px;
-			border: 2px solid #000;
-			font-size: 25px;
-			text-transform: uppercase;
+			border-bottom: 2px solid #000;
+			font-size: 30px;
+			background: none;
+			font-weight: bold;
+			text-transform: capitalize;
+		}
+		&.active{
+			display: block;
+			z-index: 500;
+			opacity: 1;
+			margin-left: -450px;
 		}
 	}
+
+.form input[type=submit]{
+	margin-top: -25px;
+}
+
